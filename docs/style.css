@@ -1,0 +1,961 @@
+/* General CSS Start */
+
+/* body layout/design */
+
+@font-face {
+  font-family: "continuum";
+  src: url("/fonts/continuum/contm-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-image: url(images/background.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  font-family: consolas, bahnschrift, sans-serif;
+  color: #222;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+  line-height: 3.5rem;
+}
+
+.home-body,
+.video-work-body,
+.photo-work-body,
+.music-body,
+.experience-body,
+.about-me-body {
+  max-width: 100%;
+  height: 100vh;
+  margin-left: 16.66%;
+
+  display: grid;
+}
+
+/* scrollbar design */
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(143, 143, 143);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b5e0f1;
+  border-radius: 0.2rem;
+}
+
+/* typeface */
+
+h1,
+h2,
+h3,
+header p,
+nav ul,
+.bold-body,
+.date {
+  font-family: continuum, consolas, bahnschrift, sans-serif;
+}
+
+.bold-body {
+  font-weight: 600;
+}
+
+.date {
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-weight: 500;
+  margin-top: 4.4rem;
+  margin-bottom: 3.5rem;
+}
+
+h2 {
+  font-size: 3.911rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2.781rem;
+  margin-bottom: 1.5rem;
+}
+
+p,
+ul,
+figcaption {
+  font-size: 1.8rem;
+}
+
+ul {
+  line-height: 4rem;
+  list-style-type: square;
+}
+
+/* Hyperlinks */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fb6718;
+}
+
+/* navbar */
+
+.mobile-nav,
+.topbar-bg {
+  display: none;
+}
+
+header,
+.desktop-nav,
+.social-links {
+  z-index: 1;
+}
+
+header,
+.desktop-nav,
+.social-links,
+.nav-bg {
+  position: fixed;
+}
+
+header,
+.desktop-nav {
+  margin-left: 3rem;
+}
+
+header {
+  text-align: end;
+}
+
+header p {
+  font-size: 2.5rem;
+  line-height: 1.4rem;
+}
+
+.nav-bg {
+  width: 32rem;
+  height: 100vh;
+
+  background-color: rgb(143, 143, 143);
+  box-shadow: 0.5rem 0 10rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.desktop-nav ul {
+  margin-top: 33.33vh;
+
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 7rem;
+  text-align: center;
+
+  list-style-type: none;
+}
+
+/* SVG Links */
+
+.social-links {
+  margin-top: 90vh;
+  margin-left: 4.9rem;
+
+  text-align: center;
+  letter-spacing: 1.5rem;
+}
+
+.social-icons {
+  width: 6rem;
+  filter: grayscale(100%) brightness(0);
+}
+
+.social-icons:hover {
+  filter: grayscale(0);
+}
+
+/* misc. formatting */
+
+iframe {
+  border: 0;
+}
+
+.content-margins {
+  margin-left: 5rem;
+}
+
+.media-ds {
+  box-shadow: 0.5rem 0 5rem rgba(0, 0, 0, 0.2);
+}
+
+/* General CSS End */
+
+/* Home Page CSS Start */
+
+.home-info {
+  margin-left: 10rem;
+  margin-right: 10rem;
+
+  align-self: center;
+}
+
+.home-info h2 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.home-info p {
+  font-size: 2.3rem;
+}
+
+/* Home Page CSS End */
+
+/* Video Work Page CSS Start*/
+
+.video-work-body {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.vid-proj {
+  width: 175ch;
+}
+
+.video-work-body figcaption {
+  width: 60ch;
+  margin: 0 5rem 5rem 6rem;
+}
+
+.vid-proj,
+.vid-links-heading {
+  grid-column: span 2;
+}
+
+.vid-pos {
+  width: 64rem;
+  height: 36rem;
+  padding: 0;
+
+  margin: 5rem 5rem 0 2.5rem;
+}
+
+#wii-play {
+  order: 1;
+}
+
+#scarlet-nexus {
+  order: 2;
+}
+
+#morning-person {
+  order: 3;
+}
+
+#good-project {
+  order: 4;
+}
+
+#college-doc {
+  order: 5;
+}
+
+/* Video Work Page CSS End */
+
+/* Photo Work Page CSS Start */
+
+.photo-work-body h2 {
+  margin-bottom: 3.5rem;
+}
+
+.gallery {
+  display: inline-block;
+  column-count: 3;
+
+  padding: 1rem;
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.before-after img {
+  width: 100%;
+  height: 50rem;
+
+  box-sizing: border-box;
+  padding: 2rem;
+
+  object-fit: contain;
+}
+
+#cat-og,
+#water-og,
+#bird-og,
+#product-og {
+  grid-column: 1;
+}
+
+#cat-edit,
+#water-edit,
+#bird-edit,
+#product-edit {
+  grid-column: 2;
+}
+
+#cat-og,
+#cat-edit {
+  grid-row: 2;
+}
+
+#water-og,
+#water-edit {
+  grid-row: 3;
+}
+
+#bird-og,
+#bird-edit {
+  grid-row: 4;
+}
+
+#product-og,
+#product-edit {
+  grid-row: 5;
+}
+
+/* Photo Work Page CSS End */
+
+/* Music Page CSS Start */
+
+.music-body {
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mus-summary {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.mus-summary p {
+  width: 75ch;
+}
+
+#music-headshot {
+  width: 30rem;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.mus-proj-heading {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.mus-proj {
+  width: 100ch;
+  margin-top: 5rem;
+}
+
+#stars-and-stripes {
+  grid-column: 1;
+  grid-row: 2;
+
+  width: 64rem;
+  height: 36rem;
+
+  margin-top: 25rem;
+  margin-left: 7.5rem;
+}
+
+#clarinet-group {
+  width: 64rem;
+
+  margin-top: 5rem;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.mus-pit,
+.mus-teach {
+  margin-top: 5rem;
+}
+
+.mus-teach {
+  grid-column: 2;
+  grid-row: 4;
+
+  padding-bottom: 10rem;
+
+  align-self: center;
+}
+
+#bari-solo {
+  width: 64rem;
+  height: 36rem;
+
+  margin-top: 5rem;
+  margin-left: 7.5rem;
+}
+
+/* Music Page CSS End */
+
+/* Experience Page CSS Start */
+
+.experience-body {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.education,
+.programs {
+  grid-column: 1 / span 3;
+}
+
+.education > h3 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.education ul {
+  list-style-type: none;
+}
+
+.programs {
+  width: 110ch;
+  grid-row: 2;
+}
+
+.equipment {
+  width: 110ch;
+
+  grid-column: 4 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.equipment h3:nth-of-type(2) {
+  margin-top: 5rem;
+}
+
+.industry-knowledge-heading {
+  grid-column: 1 / span 2;
+  margin-top: 5rem;
+}
+
+.industry-knowledge-heading h3 {
+  margin-top: 5rem;
+}
+
+#preproduction,
+#production,
+#post-production {
+  grid-column: span 2;
+  grid-row: 4;
+
+  margin: 0 5rem 5rem 5rem;
+}
+
+.media-production-headings {
+  list-style-type: none;
+}
+
+/* Experience Page CSS End */
+
+/* About Me Page CSS Start */
+
+.about-me-body {
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-me {
+  width: 150ch;
+  align-self: center;
+}
+
+.about-me .bold-body {
+  font-size: 2.5rem;
+}
+
+.about-img {
+  width: 32rem;
+
+  grid-column: 2;
+  margin: 0.5rem 0 0.5rem 0;
+
+  align-self: center;
+}
+/* About Me Page CSS End */
+
+/* Media Queries */
+
+/* Ultrawide Monitor Query */
+@media screen and (min-width: 2561px) {
+  :root {
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 125%;
+  }
+
+  .desktop-nav {
+    margin-left: 4.5rem;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 1785px) {
+  body {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .home-body,
+  .video-work-body,
+  .photo-work-body,
+  .music-body,
+  .experience-body,
+  .about-me-body {
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  .video-work-body,
+  .photo-work-body,
+  .music-body,
+  .experience-body,
+  .about-me-body {
+    padding-top: 10vh;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: initial;
+  }
+
+  .mobile-nav ul {
+    position: fixed;
+    display: grid;
+    padding: 0;
+
+    grid-template-columns: repeat(6, 1fr);
+    width: 100vw;
+    height: 10vh;
+
+    margin-top: 90vh;
+
+    align-content: center;
+    align-items: baseline;
+    justify-items: center;
+
+    list-style-type: none;
+  }
+
+  .mobile-nav-links {
+    width: 5rem;
+    height: 5rem;
+    filter: grayscale(100%) brightness(0);
+  }
+
+  .mobile-nav-links:hover {
+    filter: grayscale(0);
+  }
+
+  .topbar-bg {
+    display: initial;
+    position: fixed;
+
+    width: 100vw;
+    max-width: 100%;
+    height: 10vh;
+
+    background-color: rgba(143, 143, 143, 1);
+    box-shadow: 0.5rem 0 10rem rgba(0, 0, 0, 0.2);
+
+    z-index: 0;
+  }
+
+  .nav-bg {
+    width: 100vw;
+    height: 10vh;
+
+    margin-top: 90vh;
+
+    background-color: rgba(143, 143, 143, 1);
+
+    z-index: 0;
+  }
+
+  header {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+
+    margin: 0;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header h1 {
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+    font-size: 4rem;
+  }
+
+  header p {
+    display: none;
+  }
+
+  .social-links {
+    display: flex;
+    margin: 0;
+    height: 10vh;
+    width: 100vw;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .social-icons {
+    margin: 0;
+    padding: 0 2rem 0 0;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* Home */
+
+  .home-body {
+    height: 100%;
+  }
+
+  .home-body h2 {
+    margin-bottom: 0;
+  }
+
+  /* Video Work */
+
+  .video-work-body {
+    grid-template-columns: 1fr;
+  }
+
+  .vid-proj,
+  .vid-links-heading {
+    grid-column: 1;
+  }
+  .vid-proj {
+    width: 120ch;
+    justify-self: center;
+  }
+
+  .vid-pos {
+    margin: 0;
+  }
+
+  .vid-links-heading {
+    justify-self: center;
+    padding-bottom: 2.5rem;
+  }
+
+  .video-work-body figure {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .video-work-body figcaption {
+    max-width: fit-content;
+    padding-top: 4rem;
+  }
+
+  #wii-play,
+  #scarlet-nexus,
+  #morning-person,
+  #good-project,
+  #college-doc {
+    margin: 0 0 5rem 0;
+    grid-column: 1;
+    text-align: center;
+  }
+
+  #college-doc {
+    padding-bottom: 10vh;
+  }
+
+  /* Photo Work */
+
+  .photo-work-body {
+    padding: 10vh 0 0 0;
+  }
+
+  .photo-work-body p:nth-of-type(1) {
+    width: 70ch;
+  }
+
+  .gallery {
+    column-count: 2;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .before-after img {
+    width: 100%;
+    height: 100%;
+
+    padding: 1rem;
+  }
+
+  #cat-og,
+  #water-og,
+  #bird-og,
+  #product-og,
+  #cat-edit,
+  #water-edit,
+  #bird-edit,
+  #product-edit {
+    grid-column: 1;
+    grid-row: unset;
+  }
+
+  #cat-og {
+    grid-row: 2;
+  }
+
+  #cat-edit {
+    grid-row: 3;
+  }
+
+  #water-og {
+    grid-row: 4;
+  }
+
+  #water-edit {
+    grid-row: 5;
+  }
+
+  #bird-og {
+    grid-row: 6;
+  }
+
+  #bird-edit {
+    grid-row: 7;
+  }
+
+  #product-og {
+    grid-row: 8;
+  }
+
+  #product-edit {
+    grid-row: 9;
+    padding-bottom: 12vh;
+  }
+
+  /* Music */
+
+  .music-body {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .mus-proj,
+  .mus-pit,
+  .mus-teach,
+  #bari-solo {
+    grid-column: 1;
+  }
+
+  #music-headshot,
+  #clarinet-group {
+    display: none;
+  }
+
+  .mus-summary {
+    margin-bottom: 0;
+  }
+
+  .mus-summary p {
+    width: fit-content;
+    padding-right: 5vh;
+  }
+
+  #stars-and-stripes,
+  #bari-solo {
+    margin-top: 12rem;
+    margin-left: 0;
+
+    justify-self: center;
+  }
+
+  .mus-proj {
+    margin-top: 5rem;
+    justify-self: center;
+  }
+
+  .mus-teach {
+    grid-row: 6;
+
+    margin-top: 5rem;
+    padding-bottom: 12vh;
+
+    justify-self: center;
+  }
+
+  .mus-pit {
+    grid-row: 4;
+
+    margin: 0;
+    justify-self: center;
+  }
+
+  #bari-solo {
+    grid-row: 5;
+  }
+
+  /* Experience */
+
+  .experience-body {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .programs {
+    grid-row: 2;
+  }
+
+  .industry-knowledge-heading {
+    grid-row: 4;
+  }
+
+  #preproduction {
+    grid-row: 5;
+  }
+
+  #production {
+    grid-row: 6;
+  }
+
+  #post-production {
+    grid-row: 7;
+    padding-bottom: 10vh;
+  }
+
+  /* About Me */
+
+  .about-me-body {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me {
+    width: fit-content;
+    padding: 0 5rem 15vh 0;
+  }
+
+  .about-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  :root {
+    width: 100%;
+    height: 100%;
+    font-size: 40%;
+  }
+
+  #stars-and-stripes,
+  #bari-solo {
+    width: 75%;
+    height: 75%;
+  }
+
+  /* Home */
+
+  .home-body h2 {
+    line-height: 5rem;
+  }
+
+  /* Video */
+
+  .vid-proj {
+    width: 90ch;
+  }
+
+  .vid-pos {
+    max-width: 100%;
+  }
+
+  .video-work-body figcaption {
+    width: 40ch;
+  }
+
+  /* Photo */
+
+  .photo-work-body p:nth-of-type(1) {
+    width: 50ch;
+  }
+
+  .gallery {
+    column-count: 1;
+  }
+
+  /* Music */
+
+  .mus-summary,
+  .mus-proj {
+    width: fit-content;
+  }
+
+  /* Experience */
+
+  .education,
+  .programs,
+  .equipment,
+  #preproduction,
+  #production,
+  #post-production {
+    width: fit-content;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 820px) {
+  .social-icons,
+  .mobile-nav-links {
+    height: 4rem;
+    width: 4rem;
+  }
+}
