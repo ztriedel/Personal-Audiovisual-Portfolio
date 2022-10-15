@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "consolas";
+  src: url("fonts/Consolas-Font/consola-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
 }
