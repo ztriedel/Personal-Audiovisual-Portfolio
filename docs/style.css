@@ -19,7 +19,7 @@
 html {
   font-size: 62.5%;
   height: 100vh; /* traditional viewport units used to ensure broader browser support until svh and dvh become more widely implimented */
-  height: 100svh; /* smallviewportheight, this is to fix the overflow issue of the mobile lower navbar caused by mobile browser UI */
+  height: 100dvh; /* dynamicviewportheight, this is to fix the overflow issue of the mobile lower navbar caused by mobile browser UI */
 }
 
 body {
